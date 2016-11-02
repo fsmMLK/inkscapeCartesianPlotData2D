@@ -101,7 +101,7 @@ the extension will create two graphs, where:
   - the first  plot will employ the first column as X data and the second as Y data
   - the second plot will employ the first column as X data and the third   as Y data
 
->> Obs: Keep in mind that all plots will be placed at the center of your screen. You will have to move them in your document.
+> Obs: Keep in mind that all plots will be placed at the center of your screen. You will have to move them in your document.
 
 **Directory name:** Directory path of the input file. Enter preferably the full path of the directory
 
