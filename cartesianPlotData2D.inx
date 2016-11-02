@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Plot data</_name>
+  <id>fsmMLK.cartesianPlotData2D</id>
+  <dependency type="executable" location="extensions">cartesianPlotData2D.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">inkscapeMadeEasy_Base.py</dependency>
+  <dependency type="executable" location="extensions">inkscapeMadeEasy_Draw.py</dependency>
+  <dependency type="executable" location="extensions">inkscapeMadeEasy_Plot.py</dependency>
+  <param name="tab" type="notebook">
+    <page name="Cartesian plot" appearance="minimal" _gui-text="General config">
+      <param name="desc1" type="description" appearance="header">Values </param>
+      <param name="desc1" type="description">Use spaces to separate values </param>
+      <param name="xData" type="string" _gui-text="X values:">0 1 2 3 4</param>
+      <param name="yData" type="string" _gui-text="Y values:">0 0.5 1.0 0.5 0.0</param>
+      
+      <param name="desc1" type="description" appearance="header">File input </param>
+      <param name="flagUseFile" type="boolean" _gui-text="Read data from file">0</param>
+      <param name="dirName" type="string" _gui-text="Directory name (full path prefered):"/>
+      <param name="fileName" type="string" _gui-text="File name:"/>
+      <param name="charSeparator" type="string" _gui-text="Delimiter character"> </param>
+      
+      <param name="desc1" type="description" appearance="header">General config </param>
+      <param name="useElipsis" type="boolean" _gui-text="Use ellipsis marks at the ends">0</param>
+      <param name="drawAxis" type="boolean" _gui-text="Draw cartesian plane for each dataset">1</param>
+      <param name="generalAspectFactor" type="float" precision="2" min="0.01" max="100" _gui-text="General aspect factor (default: 1.0)">1</param>
+      <param name="desc1" type="description" appearance="header">Custom Output range (clip solution)</param>
+      <param name="yLimitsFlag" type="boolean" _gui-text="Use custom output range">0</param>
+      <param name="yMin" type="float" min="-100000" precision="3" max="100000" _gui-text="y min (linear axis only):">-1</param>
+      <param name="yMax" type="float" min="-100000" precision="3" max="100000" _gui-text="y max (linear axis only):">1</param>
+
+    </page>
+    <page name="Axes configuration" appearance="minimal" _gui-text="Axes configuration">
+
+      <param name="desc1" type="description" appearance="header">X axis </param>
+      <param name="xLabel" type="string" _gui-text="X axis label (LaTeX is supported):">$x$</param>
+      <param name="xLog10scale" type="boolean" _gui-text="Logarithmic scale">0</param>
+      <param name="xGrid" type="boolean" _gui-text="Add grid to X axis">1</param>
+      <param name="xTicks" type="boolean" _gui-text="Add ticks to X axis">1</param>
+      <param name="xTickStep" type="float" min="0" max="2000" precision="3" _gui-text="X tick step (linear axis only):">1</param>
+      <param name="xScale" type="float" min="5" max="2000" precision="1" _gui-text="X tick length (or the length of 1 decade if using log scale):">50</param>
+      <param name="xExtraText" type="string" _gui-text="X tick sufix value:"/>
+      <param name="desc1" type="description" appearance="header">Y axis </param>
+      <param name="yLabel" type="string" _gui-text="Y axis label (LaTeX is supported):">$y(x)$</param>
+      <param name="yLog10scale" type="boolean" _gui-text="Logarithmic scale">0</param>
+      <param name="yGrid" type="boolean" _gui-text="Add grid to Y axis">1</param>
+      <param name="yTicks" type="boolean" _gui-text="Add ticks to Y axis">1</param>
+      <param name="yTickStep" type="float" min="0" max="2000" precision="3" _gui-text="Y tick step (linear axis only):">1</param>
+      <param name="yScale" type="float" min="5" max="2000" precision="1" _gui-text="Y tick length (or the length of 1 decade if using log scale):">50</param>
+      <param name="yExtraText" type="string" _gui-text="Y tick sufix value:"/>
+    </page>
+    <page name="Help1" _gui-text="Help 1">
+      <_param name="instructions" type="description" xml:space="preserve">
+You can add LaTeX expressions as labels. If you need to use mathematical environment, encloses the text with $...$.
+ 
+The argument 'X or Y tick sufix value' must be compatible with mathematical environemnts. You don't need to use $...$
+
+You can either provide the values in two strings 'X values' and 'Y values' (numbers must be separated by spaces) or by providing the path of a text file containing a table of x (column 1) and y data (column 2,3,...). Therefore you can draw multiple plots at once by providing y data of each plot in different columns. The same 'X values' is assumed. You can use any character to separate columns in your file, except `.` (dot), `+` (plus), `-`(minus), `E`, `e`
+
+</_param>
+    </page>
+  </param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu _name="fsmMLK">
+        <submenu name="Plot 2D">
+          <submenu name="Cartesian"/>
+        </submenu>
+      </submenu>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">cartesianPlotData2D.py</command>
+  </script>
+</inkscape-extension>
