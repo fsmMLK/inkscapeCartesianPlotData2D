@@ -16,7 +16,7 @@ This extension is specially useful when used in conjunction with other mathemati
 
 You can either provide the data in two strings 'X values' and 'Y values' (numbers must be separated by spaces) or by providing the path of a text file containing a table of X (column 1) and Y data (column 2,3,...). You can inform the preferred field separator.
 
-In case of an input file, multiple plots can be generated at once by providing Y data of each plot in different columns. The same 'X values' is assumed.
+In case of data provided via text file, multiple plots can be generated at once by providing Y data of each plot in different columns. The same 'X values' is assumed.
 
 # Installation and requirements
 
