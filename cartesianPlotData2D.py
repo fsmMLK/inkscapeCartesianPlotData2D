@@ -45,6 +45,10 @@ class PlotData(inkBase.inkscapeMadeEasy):
     self.OptionParser.add_option("--fileName", action="store", type="string", dest="fileName", default='')
     self.OptionParser.add_option("--dirName", action="store", type="string", dest="dirName", default='')
     self.OptionParser.add_option("--charSeparator", action="store", type="string", dest="charSeparator", default=' ')
+    self.OptionParser.add_option("--skipHeader", action="store", type="inkbool", dest="skipHeader", default=False)
+    self.OptionParser.add_option("--headerSize",action="store", type="int",dest="headerSize", default=0)
+
+
 
     self.OptionParser.add_option("--useElipsis", action="store", type="inkbool", dest="useEllipsis", default=False)
     self.OptionParser.add_option("--drawAxis", action="store", type="inkbool", dest="drawAxis", default=False)
@@ -88,8 +92,10 @@ class PlotData(inkBase.inkscapeMadeEasy):
     if so.flagUseFile and os.path.isfile(filePath):
       
       s = open(filePath).read().replace(so.charSeparator,' ')
-      data = numpy.loadtxt(StringIO.StringIO(s))
-
+      if so.skipHeader:
+        data = numpy.loadtxt(StringIO.StringIO(s),skiprows=so.headerSize)
+      else:
+        data = numpy.loadtxt(StringIO.StringIO(s))
       XValuesVector=data[:,0].tolist()
 
       YValuesVector=[]

@@ -19,6 +19,8 @@
       <param name="dirName" type="string" _gui-text="Directory name (full path prefered):"/>
       <param name="fileName" type="string" _gui-text="File name:"/>
       <param name="charSeparator" type="string" _gui-text="Delimiter character"> </param>
+      <param name="skipHeader" type="boolean" _gui-text="Skip header lines">0</param>     
+      <param name="headerSize" type="int" min="0" max="1000" _gui-text="Header's number of lines:">0</param>
       
       <param name="desc1" type="description" appearance="header">General config </param>
       <param name="useElipsis" type="boolean" _gui-text="Use ellipsis marks at the ends">0</param>

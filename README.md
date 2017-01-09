@@ -71,9 +71,9 @@ Attention: The extension will not check whether the points are valid.
 
 **Read data from file:** If you toggle this option, you can provide inkscape with a text file containing the data.
 
-The text file must be organized as table of values. The first column is assumed to be the X data and the following columns Y data. You can provide more than one Y data set. In such case, the same X data is assumed for all plots
+The text file must be organized as table of values. The first column is assumed to be the X data and the following columns Y data. You can provide more than one Y data set. In such case, the same X data is assumed in all plots.
 
-All columns must have the same number of lines.
+All columns must have the same number of lines. The file can have one header with an arbitrary number of lines. In such case, you must inform the number of lines to be skipped (see below).
 
 The separator can be any character, except the following characters: `.` (dot), `+` (plus), `-`(minus), `E`, `e`. The values can be integer or float values in decimal or exponential notation (e.g. the value 120 can also be given as 1.2e+2
 
@@ -89,8 +89,11 @@ Example 1: (delimited by spaces)
 ```
 the extension will create **one** plot where the first column is used as X data and the second as Y data
 
-Example 1: (delimited by semicolons)
+Example 1: (delimited by semicolons, with a header containing 3 lines)
 ```
+Hello, this is my header
+second line
+another one!
 -2;4;0
 -1;2;1
  0;0;2
@@ -109,6 +112,9 @@ the extension will create two graphs, where:
 
 **Delimiter character:** Character used to delimit the columns of the file. If no character is informed, space is assumed
 
+**Skip header lines:** Toggle to inform that the file contains a header.
+
+**Header's number of lines:** Number of lines to be skipped in the header.
 
 **Use ellipsis marks at the ends:** Use ellipsis marks at the end of the plots to indicate continuation
 
