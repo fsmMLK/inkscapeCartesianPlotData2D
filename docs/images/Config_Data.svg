@@ -315,6 +315,34 @@
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
          inkscape:connector-curvature="0" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow1Sendu"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Sendu-6-2-9-1-6-9-5-3-6-3"
+       style="overflow:visible">
+      <path
+         id="path5855-7-9-3-2-2-2-9-6-9-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Sendu"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Sendu-6-2-9-1-6-9-5-7-3-4-3-7"
+       style="overflow:visible">
+      <path
+         id="path5855-7-9-3-2-2-2-9-3-1-5-7-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -323,9 +351,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.411282051282"
-     inkscape:cx="331.1243472272"
-     inkscape:cy="405.3124915896"
+     inkscape:zoom="1.256621004566"
+     inkscape:cx="328.6243472272"
+     inkscape:cy="375.8124915896"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -358,17 +386,17 @@
      inkscape:groupmode="layer"
      id="layer1">
     <image
-       sodipodi:relref="./GenaralConfig_tab.png"
+       sodipodi:absref="/home/fernando/servidor/programas/inkscape/cartesianPlotData2D/docs/images/GenaralConfig_tab.png"
        xlink:href="GenaralConfig_tab.png"
-       y="342.3622131348"
-       x="245"
-       id="image4346"
+       width="478.125"
+       height="684.375"
        preserveAspectRatio="none"
-       height="609.375"
-       width="478.125" />
+       id="image8355"
+       x="240"
+       y="334.3622131348" />
     <g
        id="g10516-6-5-1-6-70-6-0-2"
-       transform="matrix(2.88,0,0,2.88,597.1674077887,1611.362204724)"
+       transform="matrix(2.88,0,0,2.88,597.1674077887,1668.362204724)"
        inkscape:export-xdpi="890.8150024414"
        inkscape:export-ydpi="890.8150024414">
       <text
@@ -391,7 +419,7 @@
     </g>
     <g
        id="g10516-6-5-1-6-70-6-0-2-6-9-0"
-       transform="matrix(2.88,0,0,2.88,597.1674077885,1667.362204723)"
+       transform="matrix(2.88,0,0,2.88,597.1674077885,1724.362204723)"
        inkscape:export-xdpi="890.8150024414"
        inkscape:export-ydpi="890.8150024414">
       <text
@@ -414,7 +442,7 @@
     </g>
     <g
        id="g10516-6-5-1-6-70-6-0-2-7"
-       transform="matrix(2.88,0,0,2.88,597.1674077887,1641.362204724)"
+       transform="matrix(2.88,0,0,2.88,597.1674077887,1698.362204724)"
        inkscape:export-xdpi="890.8150024414"
        inkscape:export-ydpi="890.8150024414">
       <text
@@ -437,7 +465,7 @@
     </g>
     <g
        id="g5464-7"
-       transform="translate(0,360.9999999991)">
+       transform="translate(0,422.9999999991)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:14.3999996185px;line-height:100%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
@@ -464,7 +492,7 @@
     </g>
     <g
        id="g5464-7-3"
-       transform="translate(-5.000000042128,16.99999999913)">
+       transform="translate(-5.000000042128,12.99999999913)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:14.3999996185px;line-height:100%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
@@ -583,7 +611,7 @@
     </g>
     <g
        id="g10516-6-5-1-6-70-6-0-2-2-1-8"
-       transform="matrix(2.88,0,0,2.88,597.1674077887,1723.362204724)"
+       transform="matrix(2.88,0,0,2.88,597.1674077887,1782.362204724)"
        inkscape:export-xdpi="890.8150024414"
        inkscape:export-ydpi="890.8150024414">
       <text
@@ -602,6 +630,52 @@
          style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#ff0000;stroke-width:0.6000000238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#Arrow1Sendu-6-2-9-1-6-9-5-4-4-0);enable-background:accumulate"
          d="m -188.2525721489,-324.9999999999 59.0277777778,-2e-10 10.4166666667,2e-10"
          id="path5214-9-3-6-0-2-0-7-7-9-4-2-6"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g10516-6-5-1-6-70-6-0-2-6-9-0-4-3"
+       transform="matrix(2.88,0,0,2.88,597.1674077885,1608.362204723)"
+       inkscape:export-xdpi="890.8150024414"
+       inkscape:export-ydpi="890.8150024414">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:5px;line-height:100%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+         x="-129.22479"
+         y="-326.73611"
+         id="text5200-29-1-3-2-0-9-1-2-2-1-4-3-3-5"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           x="-129.22479"
+           y="-326.73611"
+           id="tspan4292-36-8-3-8-2-7-6-0-6">number of lines in the header</tspan></text>
+      <path
+         sodipodi:nodetypes="ccc"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#ff0000;stroke-width:0.6000000238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#Arrow1Sendu-6-2-9-1-6-9-5-7-3-4-3-7);enable-background:accumulate"
+         d="m -203.8775721488,-324.9999999995 74.6527777777,-6e-10 10.4166666667,2e-10"
+         id="path5214-9-3-6-0-2-0-7-7-9-9-8-1-7-2"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g10516-6-5-1-6-70-6-0-2-7-8-9"
+       transform="matrix(2.88,0,0,2.88,597.1674077887,1583.362204724)"
+       inkscape:export-xdpi="890.8150024414"
+       inkscape:export-ydpi="890.8150024414">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:5px;line-height:100%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+         x="-129.22479"
+         y="-326.73611"
+         id="text5200-29-1-3-2-0-9-1-2-2-5-6-1"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           x="-129.22479"
+           y="-326.73611"
+           id="tspan4292-36-8-3-8-3-8-2">file header toggle</tspan></text>
+      <path
+         sodipodi:nodetypes="ccc"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#ff0000;stroke-width:0.6000000238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#Arrow1Sendu-6-2-9-1-6-9-5-3-6-3);enable-background:accumulate"
+         d="m -174.36368326,-324.9999999999 45.1388888889,-2e-10 10.4166666667,2e-10"
+         id="path5214-9-3-6-0-2-0-7-7-9-5-8-7"
          inkscape:connector-curvature="0" />
     </g>
   </g>
