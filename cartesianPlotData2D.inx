@@ -42,6 +42,7 @@
       <param name="xTickStep" type="float" min="0" max="2000" precision="3" _gui-text="X tick step (linear axis only):">1</param>
       <param name="xScale" type="float" min="5" max="2000" precision="1" _gui-text="X tick length (or the length of 1 decade if using log scale):">50</param>
       <param name="xExtraText" type="string" _gui-text="X tick sufix value:"/>
+
       <param name="desc1" type="description" appearance="header">Y axis </param>
       <param name="yLabel" type="string" _gui-text="Y axis label (LaTeX is supported):">$y(x)$</param>
       <param name="yLog10scale" type="boolean" _gui-text="Logarithmic scale">0</param>
@@ -51,13 +52,15 @@
       <param name="yScale" type="float" min="5" max="2000" precision="1" _gui-text="Y tick length (or the length of 1 decade if using log scale):">50</param>
       <param name="yExtraText" type="string" _gui-text="Y tick sufix value:"/>
     </page>
-    <page name="Help1" _gui-text="Help 1">
+    <page name="Help1" _gui-text="Help">
       <_param name="instructions" type="description" xml:space="preserve">
 You can add LaTeX expressions as labels. If you need to use mathematical environment, encloses the text with $...$.
  
 The argument 'X or Y tick sufix value' must be compatible with mathematical environemnts. You don't need to use $...$
 
-You can either provide the values in two strings 'X values' and 'Y values' (numbers must be separated by spaces) or by providing the path of a text file containing a table of x (column 1) and y data (column 2,3,...). Therefore you can draw multiple plots at once by providing y data of each plot in different columns. The same 'X values' is assumed. You can use any character to separate columns in your file, except `.` (dot), `+` (plus), `-`(minus), `E`, `e`
+You can either provide the values in two strings 'X values' and 'Y values' (numbers must be separated by spaces) or by providing the path of a text file containing a table of x (column 1) and y data (column 2,3,...). Therefore you can draw multiple plots at once by providing y data of each plot in different columns. The same 'X values' is assumed.
+
+You can use any character to separate columns in your file, except `.` (dot), `+` (plus), `-`(minus), `E`, `e`
 
 </_param>
     </page>

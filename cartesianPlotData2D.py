@@ -48,8 +48,6 @@ class PlotData(inkBase.inkscapeMadeEasy):
     self.OptionParser.add_option("--skipHeader", action="store", type="inkbool", dest="skipHeader", default=False)
     self.OptionParser.add_option("--headerSize",action="store", type="int",dest="headerSize", default=0)
 
-
-
     self.OptionParser.add_option("--useElipsis", action="store", type="inkbool", dest="useEllipsis", default=False)
     self.OptionParser.add_option("--drawAxis", action="store", type="inkbool", dest="drawAxis", default=False)
     self.OptionParser.add_option("--generalAspectFactor", action="store", type="float", dest="generalAspectFactor", default=1.0) 
@@ -105,7 +103,6 @@ class PlotData(inkBase.inkscapeMadeEasy):
     else:
       #create vector of inputs
       XValuesVector = [float(column) for column in so.xValues.replace(',',' ').split()]
-      nPlots=1
       YValuesVector = [[float(column) for column in so.yValues.replace(',',' ').split()]]  # list of list
               
     # line style
@@ -141,7 +138,7 @@ class PlotData(inkBase.inkscapeMadeEasy):
         if sum(y > so.yMax for y in YValuesVector[i])>0:
           inkDraw.text.write(self, 'Some Yvalues are greater than yMax. Clipping value... PLEASE CHECK YOUR PLOT!', [position[0], position[1] + 8], root_layer, fontSize=5)
         if sum(y < so.yMin for y in YValuesVector[i])>0:
-          inkDraw.text.write(self, 'Some Yvalues are smaller than yMin. Clipping value... PLEASE CHECK YOUR PLOT!', [position[0], position[1] + 8], root_layer, fontSize=5)     
+          inkDraw.text.write(self, 'Some Yvalues are smaller than yMin. Clipping value... PLEASE CHECK YOUR PLOT!', [position[0], position[1] + 16], root_layer, fontSize=5)     
                 
         YValuesVector[i] = [min(y, so.yMax) for y in YValuesVector[i]]
         YValuesVector[i] = [max(y, so.yMin) for y in YValuesVector[i]]
