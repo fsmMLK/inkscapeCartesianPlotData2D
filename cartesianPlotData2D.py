@@ -33,7 +33,7 @@ import StringIO
 #---------------------------------------------
 class PlotData(inkBase.inkscapeMadeEasy):
   def __init__(self):
-    inkex.Effect.__init__(self)
+    inkBase.inkscapeMadeEasy.__init__(self)
 
     self.OptionParser.add_option("--tab",action="store", type="string",dest="tab", default="object") 
       
@@ -83,6 +83,7 @@ class PlotData(inkBase.inkscapeMadeEasy):
     
     #root_layer = self.current_layer
     root_layer = self.document.getroot()
+    #root_layer = self.getcurrentLayer()
     
     # check if file exists and extract coords data
     filePath=os.path.join(so.dirName, so.fileName).replace('\\','/')
