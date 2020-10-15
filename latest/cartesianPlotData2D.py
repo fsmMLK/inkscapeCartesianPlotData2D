@@ -21,13 +21,14 @@
 #
 # --------------------------------------------------------------------------------------
 
-import inkex
+import math
+import os
+
+import numpy
+
 import inkscapeMadeEasy.inkscapeMadeEasy_Base as inkBase
 import inkscapeMadeEasy.inkscapeMadeEasy_Draw as inkDraw
 import inkscapeMadeEasy.inkscapeMadeEasy_Plot as inkPlot
-import math
-import numpy
-import os
 
 
 # ---------------------------------------------
@@ -152,5 +153,3 @@ class PlotData(inkBase.inkscapeMadeEasy):
 if __name__ == '__main__':
     plot = PlotData()
     plot.run()
-    
-    
