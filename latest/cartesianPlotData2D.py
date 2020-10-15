@@ -38,6 +38,7 @@ class PlotData(inkBase.inkscapeMadeEasy):
 
         self.arg_parser.add_argument("--tab", type=str, dest="tab", default="object")
         self.arg_parser.add_argument("--subTab_help", type=str, dest="subTab_help", default="object")
+        self.arg_parser.add_argument("--subtab_axis", type=str, dest="subtab_axis", default="object")
 
         self.arg_parser.add_argument("--xData", type=str, dest="xValues", default='0 1 2 3 4')
         self.arg_parser.add_argument("--yData", type=str, dest="yValues", default='0 1 2 1 0')

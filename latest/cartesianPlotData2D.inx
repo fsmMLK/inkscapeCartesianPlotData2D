@@ -21,11 +21,7 @@
                     <label>Use spaces or commas to separate values</label>
                     <param name="xData" type="string" gui-text="X values:">0 1 2 3 4</param>
                     <param name="yData" type="string" gui-text="Y values:">0 0.5 1.0 0.5 0.0</param>
-                    <label appearance="header">General config</label>
-                    <param name="useElipsis" type="bool" gui-text="Use ellipsis marks at the ends">false</param>
-                    <param name="drawAxis" type="bool" gui-text="Draw cartesian plane for each dataset">true</param>
-                    <param name="generalAspectFactor" type="float" precision="2" min="0.01" max="100" gui-text="General aspect factor (default: 1.0):">1</param>
-                    <label appearance="header">Custom Output range (clip solution, linear axis only)</label>
+                    <label appearance="header">Custom Y range (clip Y data, linear axis only)</label>
                     <param name="yLimitsFlag" type="bool" gui-text="Use custom output range">false</param>
                     <hbox>
                         <param name="yMin" type="float" min="-100000" precision="3" max="100000" gui-text="Y limits:">-1</param>
@@ -34,43 +30,53 @@
                 </vbox>
             </hbox>
         </page>
-        <page name="Axes configuration" appearance="minimal" gui-text="Axes configuration">
+        <page name="Axes configuration" appearance="minimal" gui-text="Config">
             <hbox>
                 <vbox>
-                    <label appearance="header">X axis</label>
-                    <param name="xLabel" type="string" gui-text="Label:">$x$</param>
-                    <hbox>
-                        <vbox>
-                            <param name="xLog10scale" type="bool" gui-text="Log scale">false</param>
-                            <param name="xGrid" type="bool" gui-text="Add grid">true</param>
-                            <param name="xTicks" type="bool" gui-text="Add ticks">true</param>
-                        </vbox>
-                        <spacer/>
-                        <separator/>
-                        <spacer/>
-                        <vbox>
-                            <param name="xTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
-                            <param name="xScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
-                            <param name="xExtraText" type="string" gui-text="Tick sufix¹:"></param>
-                        </vbox>
-                    </hbox>
-                    <label appearance="header">Y axis</label>
-                    <param name="yLabel" type="string" gui-text="Label:">$y(x)$</param>
-                    <hbox>
-                        <vbox>
-                            <param name="yLog10scale" type="bool" gui-text="Log scale">false</param>
-                            <param name="yGrid" type="bool" gui-text="Add grid">true</param>
-                            <param name="yTicks" type="bool" gui-text="Add ticks">true</param>
-                        </vbox>
-                        <spacer/>
-                        <separator/>
-                        <spacer/>
-                        <vbox>
-                            <param name="yTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
-                            <param name="yScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
-                            <param name="yExtraText" type="string" gui-text="Tick sufix¹:"></param>
-                        </vbox>
-                    </hbox>
+                    <label appearance="header">General config</label>
+                    <param name="useElipsis" type="bool" gui-text="Use ellipsis marks at the ends">false</param>
+                    <param name="drawAxis" type="bool" gui-text="Draw cartesian plane for each dataset">true</param>
+                    <param name="generalAspectFactor" type="float" precision="2" min="0.01" max="100" gui-text="General aspect factor (default: 1.0):">1</param>
+                    <label appearance="header">Axes</label>
+                    <param name="subtab_axis" type="notebook">
+                        <page name="Xaxis" appearance="minimal" gui-text="X axis">
+                            <param name="xLabel" type="string" gui-text="Label:">$x$</param>
+                            <hbox>
+                                <vbox>
+                                    <param name="xLog10scale" type="bool" gui-text="Log scale">false</param>
+                                    <param name="xGrid" type="bool" gui-text="Add grid">true</param>
+                                    <param name="xTicks" type="bool" gui-text="Add ticks">true</param>
+                                </vbox>
+                                <spacer/>
+                                <separator/>
+                                <spacer/>
+                                <vbox>
+                                    <param name="xTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
+                                    <param name="xScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
+                                    <param name="xExtraText" type="string" gui-text="Tick sufix¹:"></param>
+                                </vbox>
+                            </hbox>
+                        </page>
+                        <page name="Yaxis" appearance="minimal" gui-text="Y axis">
+                            <param name="yLabel" type="string" gui-text="Label:">$y(x)$</param>
+                            <hbox>
+                                <vbox>
+                                    <param name="yLog10scale" type="bool" gui-text="Log scale">false</param>
+                                    <param name="yGrid" type="bool" gui-text="Add grid">true</param>
+                                    <param name="yTicks" type="bool" gui-text="Add ticks">true</param>
+                                </vbox>
+                                <spacer/>
+                                <separator/>
+                                <spacer/>
+                                <vbox>
+                                    <param name="yTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
+                                    <param name="yScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
+                                    <param name="yExtraText" type="string" gui-text="Tick sufix¹:"></param>
+
+                                </vbox>
+                            </hbox>
+                        </page>
+                    </param>
                 </vbox>
             </hbox>
             <label>¹ LaTeX: text will be in inline math mode $...$.</label>
@@ -80,16 +86,17 @@
 
         <page name="Help" gui-text="Help">
             <param name="subTab_help" type="notebook">
-                <page name="PyhtonHelp" gui-text="Data help">
+                <page name="PyhtonHelp" gui-text="Dataset help">
                     <label>You can either provide the values manually</label>
-                    <label>or using a text file containing a table </label>
-                    <label> of x (column 1) and y data (column 2,3,...).</label>
+                    <label>or using a text file containing a table</label>
+                    <label>of x (column 1) and y data (column 2,3,...).</label>
                     <spacer/>
-                    <label>If the file has multiple Y data, the extension will</label>
-                    <label>create multiple plots at once. The same 'X values' is assumed.</label>
+                    <label>If the file has multiple columns, the extension will</label>
+                    <label>create a plot for each Y data.</label>
                     <spacer/>
-                    <label>You can use any character to separate columns in your file,</label>
-                    <label>except `.` (dot), `+` (plus), `-`(minus), `E`, `e`</label>
+                    <label>You can use any character to separate columns</label>
+                    <label> in your file, except:</label>
+                    <label>`.` (dot), `+` (plus), `-`(minus), `E`, `e`</label>
                 </page>
                 <page name="About" gui-text="About">
                     <label>For details please refer to</label>

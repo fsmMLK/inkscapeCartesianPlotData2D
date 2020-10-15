@@ -1,5 +1,5 @@
 # cartesianPlotData2D
- Inkscape extension to plot a set of points, given their coordinates (x,y)
+
 This extension will assist you creating plots from datasets in [Inkscape](https://inkscape.org/).
 
 
@@ -117,7 +117,7 @@ Installation procedures for latest and older versions are described below.
 
 The extension can be found under `extensions > fsmMLK > Plot 2D > Cartesian` menu.
 
-This extension is presented in two tabs, **Dataset** and  **Axes configuration**. The first is used to pass the data set and provide general configuration options. The second is used to configure the axes.
+This extension is presented in two tabs, **Dataset** and  **Config**. The first is used to pass the data set and provide general configuration options. The second is used to configure the axes.
 
 ## Dataset tab
 
@@ -178,6 +178,24 @@ the extension will create two graphs, where:
 
 **Y values:** String containing Y values of each point. The values must be separated by space or comma. 'X values' and 'Y values' must have the same number of values.
 
+### Custom output range section
+
+
+**Use custom output range:** Toggle custom Y axis range. If unchecked the limits will be defined by the limits of the input data.
+
+**Y limits:** (linear scale only) Set the range of the dependent variable (Y axis), despite of the data. On the side there are two fields for the lower and upper limits.
+
+If Ydata has values outside the specified custom limits, then the plot will be clipped at these values. A text element will be added to the document informing it. Check your plot! See image bellow.
+
+<img src="docs/images/yMin_yMax.png" width="600px"/>
+
+## Config tab
+
+This tab has two sections. The first contains general properties of the plot and the second controls the axes.
+
+<img src="docs/images/AxesConfig_Tab.png" width="450px"/>
+
+
 ### General config section
 
 **Use ellipsis marks at the ends:** Use ellipsis marks at the end of the plots to indicate continuation
@@ -190,20 +208,9 @@ the extension will create two graphs, where:
 
 <img src="docs/images/generalAspectRatio.png" width="600px"/>
 
-### Custom output range section
+### Axes section
 
-**Use custom output range:** Toggle custom Y axis range. If unchecked the limits will be defined by the limits of the input data.
-
-**Y limits:** (linear scale only) Set the range of the dependent variable (Y axis), despite of the data. On the side there are two fields for the lower and upper limits.
-
-If Ydata has values outside the specified custom limits, then the plot will be clipped at these values. A text element will be added to the document informing it. See image bellow.
-
-<img src="docs/images/yMin_yMax.png" width="600px"/>
-
-## Axes Configuration tab
-
-This tab has two sections, one for each axis. They affect the axes the same way.
-<img src="docs/images/AxesConfig_Tab.png" width="450px"/>
+The parameters in this section controls X and Y axes. They act on the axes the same way.
 
 **Label:** label of the axes. If LaTeX support is activated and you want to write in mathematical environment, enclose your text with $...$.
 
