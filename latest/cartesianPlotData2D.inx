@@ -15,7 +15,7 @@
                     <param name="charSeparator" type="string" gui-text="Delimiter character:"></param>
                     <hbox>
                         <param name="skipHeader" type="bool" gui-text="Skip header lines. Num lines:">false</param>
-                        <param name="headerSize" type="int" min="1" max="1000" gui-text="">0</param>
+                        <param name="headerSize" type="int" min="1" max="1000" gui-text=" ">0</param>
                     </hbox>
                     <label appearance="header">Manual dataset</label>
                     <label>Use spaces or commas to separate values</label>
@@ -25,7 +25,7 @@
                     <param name="yLimitsFlag" type="bool" gui-text="Use custom output range">false</param>
                     <hbox>
                         <param name="yMin" type="float" min="-100000" precision="3" max="100000" gui-text="Y limits:">-1</param>
-                        <param name="yMax" type="float" min="-100000" precision="3" max="100000" gui-text="">1</param>
+                        <param name="yMax" type="float" min="-100000" precision="3" max="100000" gui-text=" ">1</param>
                     </hbox>
                 </vbox>
             </hbox>
